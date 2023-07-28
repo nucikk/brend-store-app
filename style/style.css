@@ -1,0 +1,57 @@
+header {
+  width: clamp(375px, 100%, 90rem);
+  height: 6rem;
+  padding: 1.0625rem 2rem;
+  margin-inline: auto;
+}
+
+/* Inter Fonts Default */
+.inter5_16 {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/* Flexbox Default*/
+.DispDefault {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Section */
+.navigation,
+.nav_items {
+  display: flex;
+  gap: 24px;
+}
+
+.action_btn {
+  width: 6.25rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: #000;
+  font-weight: 700;
+  line-height: 1.5rem;
+  display: block;
+}
+
+.burger_icon {
+  display: none;
+}
+
+/* Media Query 375px */
+@media only screen and (max-width: 375px) {
+  .action_btn {
+    display: none;
+  }
+
+  .burger_icon {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
