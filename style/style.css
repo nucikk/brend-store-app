@@ -78,7 +78,7 @@ header {
 
 .purchased_about {
   width: 14.75rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
 }
@@ -88,6 +88,32 @@ header {
 .small_tablet_img1,
 .mobile_img1 {
   display: none;
+}
+
+/* Feature Section*/
+.feature_container {
+  display: flex;
+  padding: 4rem 9.375rem;
+  gap: 1.875rem;
+  background-color: #F3F3F3;
+}
+
+.feature_box {
+  width: clamp(17.4375rem, 100%, 22.5rem);
+}
+
+.feature_user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.feature_review {
+  margin-top: 1rem;
+  line-height: 1.5rem;
 }
 
 /*Media Query 1024px (headline section) */
@@ -120,7 +146,14 @@ header {
   .purchased_about {
     width: 23.125rem;
   }
+
+  /* FEATURE SECTION  */
+  .feature_container {
+    padding: 2.4375rem 2rem;
+    gap: 3.4375rem;
+  }
 }
+
 /*Media Query 744px (headline section) */
 @media only screen and (max-width: 46.5rem) {
   .tablet_img1 {
@@ -134,7 +167,7 @@ header {
 
   .headline_content {
     width: clamp(23.4375rem, 100%, 43.5rem);
-    margin: 0 0 24px 0;
+    margin: 0 0 1.5rem 0;
   }
 
   .purchased_box {
@@ -142,11 +175,29 @@ header {
   }
 
   .headline_title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .headline_section {
-    padding: 0 24px;
+    padding: 0 1.5rem;
+  }
+
+  /* FEATURE SECTION  */
+  .feature_container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+
+  .feature_box {
+    width: clamp(20.4375rem, 100%, 46.5rem);
+  }
+
+  .feature_user,
+  .feature_review {
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -160,6 +211,7 @@ header {
 
 /* Media Query 375px (Header section - headline section)*/
 @media only screen and (max-width: 23.4375rem) {
+  /* Header and Headline Sections */
   .burger_icon,
   .mobile_img1 {
     display: block;
@@ -172,7 +224,13 @@ header {
   .headline_content {
     padding: 0 1.5rem;
   }
+
   .purchased_about {
     width: 20.4375rem;
+  }
+
+  .feature_box {
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 }
