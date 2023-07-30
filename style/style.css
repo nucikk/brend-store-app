@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 header,
 section,
+footer,
 .desktop_img3 {
   width: clamp(23.4375rem, 100%, 90rem);
   margin-inline: auto;
@@ -13,10 +18,13 @@ header {
 
 .headline_section {
   padding: 4rem 10.3125rem;
+  gap: 8.125rem;
+}
+
+.location_section, .headline_section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8.125rem;
 }
 
 /* Inter Fonts Default */
@@ -145,6 +153,7 @@ header {
   margin-bottom: 1rem;
 }
 
+/* NONE BLOCK ELEMENTS */
 .burger_icon,
 .tablet_img1,
 .small_tablet_img1,
@@ -154,7 +163,9 @@ header {
 .mobile_img2,
 .tablet_img3,
 .tablet_small_img3,
-.mobile_img3 {
+.mobile_img3,
+.logo_footer_1024,
+.logo_footer_375 {
   display: none;
 }
 
@@ -167,7 +178,7 @@ header {
 }
 
 .banner_container {
-  width: clamp(15.4375rem, 100%,  33.75rem);
+  width: clamp(15.4375rem, 100%, 33.75rem);
   text-align: center;
   color: #fff;
   position: absolute;
@@ -188,6 +199,42 @@ header {
   margin: 0 auto;
 }
 
+/*FOOTER SECTION */
+
+.footer_container {
+  height: 21rem;
+  padding: 6rem 9.375rem;
+  display: flex;
+  background-color: #000;
+}
+
+.footer_info_box {
+  width: clamp(15.4375rem, 100%, 228px);
+}
+
+.footer_info_box h4 {
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer_info_box a,
+h4,
+.subscribe_msg {
+  color: #FFF;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.footer_info_box li {
+  margin: .5rem 0;
+}
+
+.subscribe_msg {
+  font-size: .875rem;
+  opacity: 0.4000000059604645;
+}
+
 @media only screen and (max-width: 1188px) {
   .content_container {
     display: none;
@@ -200,12 +247,12 @@ header {
 
 /*Media Query 1024px (headline section) */
 @media only screen and (max-width: 64rem) {
+
   .tablet_img1,
   .tablet_img3 {
-    width: clamp(13.125rem, 100%, 60rem);
+    width: clamp(13.125rem, 100%, 64rem);
     display: block;
   }
-
 
   .headline_section {
     flex-wrap: wrap;
@@ -235,14 +282,17 @@ header {
 
   .desktop_img1,
   .content_img2,
-  .desktop_img3 {
+  .desktop_img3,
+  .footer_info_box:first-child,
+  .footer_info_box:last-child {
     display: none;
   }
 
   /* tablet_img2 */
   .tablet_img2,
   .content_container,
-  .tablet_img3 {
+  .tablet_img3,
+  .logo_footer_1024 {
     display: block;
   }
 
@@ -262,10 +312,31 @@ header {
   .content_text {
     width: clamp(20.4375rem, 100%, 25.9375rem);
   }
+
+  .footer_info_box {
+    height: 13.6875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .footer_container {
+    padding: 2.8125rem 2rem;
+  }
+
+  .logo_footer_1024 {
+    width: 5.4375rem;
+    margin-bottom: 3rem;
+  }
+
+  .navigation_box {
+    height: 9rem;
+  }
 }
 
 /*Media Query 744px (headline section) */
 @media only screen and (max-width: 46.5rem) {
+
   .tablet_img1,
   .tablet_img2,
   .tablet_img3 {
@@ -337,10 +408,18 @@ header {
     width: clamp(23.4375rem, 100%, 46.5rem);
     display: block;
   }
+
+  .footer_container {
+    height: 242.459px;
+    padding: 2.5rem 1.375rem;
+    align-items: center;
+    gap: .3125rem;
+  }
 }
 
 /* Media Query 600px*/
 @media only screen and (max-width: 37.5rem) {
+
   .action_btn,
   .navigation {
     display: none;
@@ -349,8 +428,9 @@ header {
   .banner_container,
   .location_headline {
     font-size: 1.125rem;
-    margin:0;
+    margin: 0;
   }
+
   body {
     overflow-x: hidden;
   }
@@ -363,13 +443,15 @@ header {
   .burger_icon,
   .mobile_img1,
   .mobile_img2,
-  .mobile_img3 {
+  .mobile_img3,
+  .logo_footer_375 {
     display: block;
   }
 
   .small_tablet_img1,
   .tablet_small_img2,
-  .tablet_small_img3 {
+  .tablet_small_img3,
+  .logo_footer_1024 {
     display: none;
   }
 
@@ -402,12 +484,28 @@ header {
     font-size: .875rem;
   }
 
-  .banner_container,   .location_headline{
+  .banner_container,
+  .location_headline {
     font-size: 1.75rem;
     padding: .75rem 0;
     width: clamp(15.4375rem, 100%, 15.4375rem);
   }
 
+  .footer_container {
+    height: 100%;
+    padding: 3.125rem 1.875rem;
+    gap: .3125rem;
+  }
 
- 
+  .navigation_box {
+    width: 6.125rem;
+    text-align: center;
+  }
+
+  .logo_footer_375 {
+    margin-bottom: 1.5625rem;
+  }
+  .navigation_box {
+    height: 10.5rem;
+  }
 }
